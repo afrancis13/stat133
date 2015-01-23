@@ -1,0 +1,5 @@
+name = "Alex Francis"
+SID = "24128903"
+email = "afrancis@berkeley.edu"
+github_name = "afrancis13"
+status = "enrolled"
