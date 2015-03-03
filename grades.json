@@ -1,0 +1,23 @@
+{
+    "login": "afrancis13", 
+    "url": "git@github.com:afrancis13/stat133.git", 
+    "name": "Alex Francis", 
+    "email": "afrancis@berkeley.edu", 
+    "github_name": "afrancis13", 
+    "status": "enrolled", 
+    "grades": {
+        "hw1": {
+            "note": "", 
+            "hash": "31671f87b2c829b1d646c3a39ee6c4675507d432", 
+            "earned": 20, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw1": {
+                    "possible": 20, 
+                    "earned": 20
+                }
+            }
+        }
+    }
+}
