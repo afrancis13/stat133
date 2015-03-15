@@ -13,6 +13,7 @@ rotate <- function(x) t(apply(x, 2, rev))
 bml.init <- function(r, c, p){
   random_ints <- sample(x = c(0:2), size = r * c, replace=TRUE, prob = c(1 - p, p/2, p/2))
   m <- matrix(random_ints, r, c)
+  image(m, col= c("white", "blue", "red"))
   return(m)
 }
 
