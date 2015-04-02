@@ -79,7 +79,7 @@ for (i in 1:test.ndays) {
   tabulate <- table(return.matrix[, i])
   counts <- c(counts, c(tabulate[names(tabulate) == 1]))
 }
-plot(x=1:test.ndays, y=counts, col=colors[1], type="l",
+plot(x=1:test.ndays, y=counts, col=colors[1], type="p",
      main="Drug Adaptation Simulation", xlab="Day", 
      ylab="Number of Doctors that Endorse the Drug",
      xlim = c(0, 120), ylim = c(0, 30))
@@ -91,7 +91,7 @@ for (i in 2:9) {
     tabulate <- table(return.matrix[, j])
     counts <- c(counts, c(tabulate[names(tabulate) == 1]))
   }
-  lines(x=1:test.ndays, y=counts, col=colors[i], type="l", 
+  points(x=1:test.ndays, y=counts, col=colors[i], type="p", 
         main="Drug Adaptation Simulation", xlab="Day",
         ylab="Number of Doctors that Endorse the Drug",
         xlim = c(0, 100), ylim = c(0, 30))
