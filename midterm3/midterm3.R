@@ -9,7 +9,12 @@
 #   <num.dollar>: an integer indicating how many elements of <chvec> contain the "$"
 #     symbol. For example: numDollarElements(c('dollar', 'd$llar', '$$$')) should return 2
 
+numDollarElements <- function(chvec) {
+  dollarEl <- grep("\\$", chvec)
+  return(length(dollarEl))
+}
 
+# PASSES ALL MY TESTS
 
 # Write a function called prodDigits that compute the product of all (single) digits in
 # a string.  The function should return 0 if there is no digit in the
@@ -18,12 +23,25 @@
 #
 # and return the following
 #   <total>: A single number (the product of all digits in chvec)
+prodDigits <- function(chvec) {
+  digitidcs <- gregexpr("[0-9]", chvec)[[1]]
+  print(digitidcs)
+  if (digitidcs[1] != -1) {
+    return(0)
+  } else {
+    product = 1
+    for (i in digitidcs) {
+      product = product * as.integer(substr(chvec, i, i))
+    }
+    return(product)    
+  }
+}
 
 
 
 # Some test cases:
-# all.equal(prodDigits("1z3p ! 22"), 12)
-# all.equal(prodDigits("abcdefg"), 0)
+all.equal(prodDigits("1z3p ! 22"), 12)
+all.equal(prodDigits("abcdefg"), 0)
 
 # Write a function called hisToHer that converts every instance of 
 # him in a string to her; every instance of he to she and every instance 
@@ -34,6 +52,12 @@
 #
 # and return
 #   <herchvec>: The same character vector with the required substitutions.
+hisToHer <- function(chvec) {
+  vec1 <- gsub("\\<him\\>", "her", chvec)
+  vec2 <- gsub("\\<he\\>", "she", vec1)
+  herchvec <- gsub("\\<his\\>", "her", vec2)
+  return(herchvec)
+}
 
 
 # A test case
@@ -55,4 +79,15 @@ all.equal(
 #  <letter> The most common letter or letters in the string.
 # For example mostCommonLetter("aabbccccdddd") should return 
 # [1] "c" "d"
-
+mostCommonLetter <- function(chvec) {
+  lowerCase <- tolower(chvec)
+  tableChvec <- table(unlist(strsplit(chvec, "")))
+  maxTable <- max(tableChvec)
+  common <- c()
+  for (i in 1:length(tableChvec)) {
+    if (tableChvec[i] == maxTable) {
+      common <- c(common, names(tableChvec)[i])
+    }
+  }
+  return(common)
+}

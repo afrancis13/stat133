@@ -12,15 +12,24 @@
 # Output variable:
 # <element.lengths>: a numeric vector whose entries are the lengths of each
 #   element of <data.list>
-
 listLengths <- function(data.list) {
-  element.lengths <- lapply(data.list, function(x) length(x))
-  return(element.lengths)
+  data.list <- sapply(data.list, length)
+  return(data.list)
 }
+#listLengths <- function(data.list) {
+#  element.lengths <- lapply(data.list, function(x) length(x))
+#  return(element.lengths)
+#}
 
-lst <- list(a = c(10, 20, 30), b = c(40, 50), d = c(60))
-listLengths(lst)
-
+test = list()
+sol = list()
+a = seq(1, 5, by = 1)
+b = seq(1, 10, by = 1)
+c = seq(1, 15, by = 1)
+d = seq(1, 20, by = 1)
+e = seq(1, 25, by = 1)
+test$listLengths = list(a,b,c,d,e)
+sol$listLengths = listLengths(test$listLengths)
 #### Function 2
 #### Implement the function "powers"
 
@@ -44,8 +53,9 @@ powers <- function(x, k){
   return(x.power)
 }
 
-vec <- c(1, 2, 3, 4, 5)
-powers(vec, 4)
+test$powers.x = seq(1, 3, by = 1)
+test$powers.k = 3
+sol$powers = powers(test$powers.x, test$powers.k)
 
 #### Function #3
 #### Implement the function "recipeConversion"
@@ -95,16 +105,8 @@ recipeConversion <- function(recipe){
     return(recipe)
 }
 
-amount = c(2, 3, 24, 1) 
-unit = c("cups", "oz", "pound", "cup") 
-ingredient = c( "flour", "water", "sugar", "soda") 
-df = data.frame(amount, unit, ingredient, stringsAsFactors=FALSE)
-
-recipeConversion(df)
-
-df_error = data.frame(wow, unit, ingredient, stringsAsFactors=FALSE)
-
-recipeConversion(df_error)
+test$recipe = read.table("choc_cake.txt",sep ="\t", header = TRUE, stringsAsFactors = FALSE)
+sol$recipe = recipeConversion(test$recipe)
 
 
 
