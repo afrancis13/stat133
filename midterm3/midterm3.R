@@ -25,8 +25,7 @@ numDollarElements <- function(chvec) {
 #   <total>: A single number (the product of all digits in chvec)
 prodDigits <- function(chvec) {
   digitidcs <- gregexpr("[0-9]", chvec)[[1]]
-  print(digitidcs)
-  if (digitidcs[1] != -1) {
+  if (digitidcs[1] == -1) {
     return(0)
   } else {
     product = 1
