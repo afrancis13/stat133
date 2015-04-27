@@ -155,7 +155,7 @@ bootPlot = function(x, y, coeff, trueCoeff) {
   }
 
   if (length(trueCoeff) == 2) {
-    abline(a = trueCoeff[2], b = trueCoeff[1,], col=rgb(1, 0, 0))
+    abline(a = trueCoeff[2], b = trueCoeff[1], col=rgb(1, 0, 0))
   } else {
     a <- trueCoeff[3]
     b <- trueCoeff[2]
