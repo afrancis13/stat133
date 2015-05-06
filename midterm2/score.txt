@@ -1,0 +1,7 @@
+y: incorrect logical  -1
+w: wrong permutation  -1
+f1: women -1
+f3  -1
+cache: return vector, not lists  -2
+
+Score: 27/33
