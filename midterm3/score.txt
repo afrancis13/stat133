@@ -1,0 +1,16 @@
+Total: 19/20
+
+Function 1
+5/5
+
+Function 2
+5/5
+
+Function 3
+5/5
+
+Function 4
+4/5
+
+Anything that is not a letter should be removed, so mostCommonLetter(“a11”) is “a” and not “1”.
+
