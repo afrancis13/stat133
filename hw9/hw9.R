@@ -64,7 +64,7 @@ plot(bub)
 
 # We will be using the 'WorldBank' dataset containing information of countries,
 # such as fertility rate, life expectancy, population, GDP per capita, etc.
-load("~/src/stat133/hw9/WorldBank.RData")
+load("WorldBank.RData") # Changed by Andy
 
 # First subset the data frame and create a new data frame called <WorldDat>,
 # containing only the following columns from WordBank:
