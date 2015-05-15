@@ -51,7 +51,8 @@
 
 # load the data
 
-load("~/src/stat133/assignments/hw2/WR1500MeterMen.rda")
+# load("~/src/stat133/assignments/hw2/WR1500MeterMen.rda")
+load("WR1500MeterMen.rda")
 
 # The name of the object loaded is wr1500m
 # The time (in the column "times") in these data are recorded in seconds, 
@@ -162,7 +163,8 @@ text(x = 1998, y = wr_1998, wr1500m$athlete[wr1500m$year == 1998])
 # The data frame SO2012Ctry contains this information.
 # It can be loaded into R with
 
-load("~/src/stat133/assignments/hw2/SummerOlympics2012Ctry.rda")
+# load("~/src/stat133/assignments/hw2/SummerOlympics2012Ctry.rda")
+load("SummerOlympics2012Ctry.rda")
 
 #Q6 Take a look at the variables in this data frame.
 # What kind of variable is GDP and population?
@@ -299,7 +301,8 @@ symbols(x = yes_medals$longitude, y = yes_medals$latitude, circles = yes_medals$
 # and contains information about every athlete who competed 
 # in the Olympics.
 
-load("~/src/stat133/assignments/hw2/London2012ALL_ATHLETES.rda")
+# load("~/src/stat133/assignments/hw2/London2012ALL_ATHLETES.rda")
+load("London2012ALL_ATHLETES.rda")
 
 # There is one observation for each athlete. 
 # (Actually, about 20 athletes have two records if they
