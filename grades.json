@@ -61,6 +61,23 @@
                     "earned": 15
                 }
             }
+        }, 
+        "final-feiw50hj": {
+            "note": "", 
+            "hash": "daa35802fab37146a72cb5a20940f1cc78d46d41", 
+            "earned": 64, 
+            "possible": 100, 
+            "penalty": 0, 
+            "parts": {
+                "final": {
+                    "possible": 69, 
+                    "earned": 38
+                }, 
+                "final_fig": {
+                    "possible": 31, 
+                    "earned": 26
+                }
+            }
         }
     }, 
     "section": "lab4"

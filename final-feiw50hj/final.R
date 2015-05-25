@@ -123,7 +123,8 @@ cw3 <- mean(subset(ChickWeight, Time == 0)$weight)
 
 # [1 pt]
 # Create [cw4] a random subset of 200 ChickWeight observations (any 200)
-cw4 <- subset(ChickWeight, sample(1:dim(ChickWeight)[1], size=200))
+## inga commented out, line produces an error
+#cw4 <- subset(ChickWeight, sample(1:dim(ChickWeight)[1], size=200))
 
 # for the next two tasks you will use the data frame infants (size 1236x15)
 # LEAVE AS IS:
